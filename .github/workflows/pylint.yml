@@ -1,4 +1,4 @@
-name: Pylint and Comment PR
+name: Pylint, Comment PR, and Automatic Merge
 
 on:
   pull_request:
@@ -6,8 +6,9 @@ on:
       - main
 
 jobs:
-  build:
+  pylint_and_merge:
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -44,3 +45,27 @@ jobs:
           const { number } = context.issue;
           const body = 'Pylint analysis:\n```' + '${{ steps.pylint-check.outputs.stdout }}' + '```';
           github.issues.createComment({ owner, repo, issue_number: number, body });
+
+    - name: Automatic Merge
+      if: always()
+      uses: actions/github-script@v4
+      with:
+        github-token: ${{ secrets.PYLINT_TOKEN }}  # Usa el mismo token de acceso que se utiliza para comentar
+        script: |
+          const { owner, repo } = context.repo;
+          const { number } = context.issue;
+          const octokit = github.getOctokit(process.env.GITHUB_TOKEN);  // Obtén una instancia de Octokit
+          const { data: pullRequest } = await octokit.pulls.get({
+            owner,
+            repo,
+            pull_number: number
+          });
+          if (pullRequest.mergeable === true) {
+            await octokit.pulls.merge({
+              owner,
+              repo,
+              pull_number: number
+            });
+          } else {
+            console.log('PR is not mergeable. Skipping automatic merge.');
+          }
