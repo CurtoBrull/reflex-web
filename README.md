@@ -27,10 +27,17 @@
 
 
 ## Comandos de interés
+Activar python venv
+```
+py -m venv venv
+.\venv\Scripts\activate
+```
+Instalar Reflex
+```
+pip install reflex
+```
 * reflex init
 * reflex run
 
-Activar python venv
-```
-.\venv\Scripts\activate
-```
+
+
