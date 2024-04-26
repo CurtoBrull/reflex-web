@@ -41,7 +41,7 @@ jobs:
       if: always()
       uses: actions/github-script@v4
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.PYLINT_TOKEN }}
         script: |
           const { owner, repo } = context.repo;
           const { number } = context.issue;
