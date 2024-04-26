@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
-        python-version: "3.x"  # Instalará la última versión de Python 3 disponible
+        python-version: "3.x"
 
     - name: Install dependencies
       run: |
@@ -50,11 +50,11 @@ jobs:
       if: always()
       uses: actions/github-script@v4
       with:
-        github-token: ${{ secrets.PYLINT_TOKEN }}  # Usa el mismo token de acceso que se utiliza para comentar
+        github-token: ${{ secrets.PYLINT_TOKEN }}
         script: |
           const { owner, repo } = context.repo;
           const { number } = context.issue;
-          const octokit = github.getOctokit(process.env.GITHUB_TOKEN);  // Obtén una instancia de Octokit
+          const octokit = github.getOctokit(context.token);
           const { data: pullRequest } = await octokit.pulls.get({
             owner,
             repo,
