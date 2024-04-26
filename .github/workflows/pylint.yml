@@ -20,12 +20,11 @@ jobs:
         pip install pylint
     - name: Check for Python files
       run: |
-        if [ ! -z "$(git ls-files '*.py')" ]; then
+        python_files=$(git ls-files '*.py')
+        if [ ! -z "$python_files" ]; then
           echo "Python files found. Proceeding with pylint analysis."
+          pylint $python_files
         else
           echo "No Python files found. Skipping pylint analysis."
           exit 0
         fi
-    - name: Analysing the code with pylint
-      run: |
-        pylint $(git ls-files '*.py')
