@@ -1,9 +1,19 @@
+"""
+This module contains the header component for the web application.
+It includes the avatar, name, role, skills, and social media links of the user.
+"""
+
 import reflex as rx
 from libgravatar import Gravatar
+
 from reflex_web.components.link_button import link_button
 
 
 def header() -> rx.Component:
+    """
+    This function returns the header component of the web application.
+    :return:    The header component.
+    """
     g = Gravatar('curto.brull.javier@gmail.com')
     image = g.get_image()
     return rx.vstack(

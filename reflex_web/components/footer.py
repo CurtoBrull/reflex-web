@@ -1,3 +1,8 @@
+"""
+This module contains the footer component for the web application.
+It includes the current year, a link to website, and links profiles.
+"""
+
 import datetime as dt
 
 import reflex as rx
@@ -6,10 +11,15 @@ from reflex_web.components.link_button import link_button
 
 
 def footer() -> rx.Component:
+    """
+    Footer component for the web application.
+    :return: Component with the footer of the web application.
+    """
     current_year = str(dt.datetime.now().year)
     url = "https://jcurto.eu"
+
     return rx.hstack(
-        rx.text("\u24b8 2023-{} ".format(current_year),
+        rx.text(f"\u24b8 2023-{current_year} ",
                 color="rgb(209, 150, 23)",
                 font_size="1em"),
         rx.link(

@@ -1,7 +1,15 @@
+"""
+This module contains the navbar component for the web application.
+"""
+
 import reflex as rx
 
 
 def navbar() -> rx.Component:
+    """
+    Navbar component for the web application.
+    :return: Component "navbar"
+    """
     return rx.hstack(
         rx.text(
             "Javier Curto",
