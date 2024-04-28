@@ -4,6 +4,8 @@ This module contains the navbar component for the web application.
 
 import reflex as rx
 
+import styles.styles as st
+
 
 def navbar() -> rx.Component:
     """
@@ -14,12 +16,13 @@ def navbar() -> rx.Component:
         rx.text(
             "Javier Curto",
             height="50px",
-            color="rgb(209, 150, 23)"
+            color=st.Colors.PRIMARY,
+            align="center"
         ),
         position="sticky",
-        bg="#1e2326",
-        padding_x="16px",
-        padding_y="8px",
-        width="100%",
+        bg=st.Colors.BG,
+        padding_x=st.Spacing.DEFAULT,
+        padding_y=st.Spacing.SMALL,
+        width=st.Percentages.FULL,
         z_index="999",
     )

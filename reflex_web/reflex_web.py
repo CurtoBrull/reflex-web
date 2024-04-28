@@ -5,6 +5,7 @@ It includes the navbar, header, aboutme, skills, cv, portfolio, contact, and foo
 
 import reflex as rx
 
+import styles.styles as st
 from reflex_web.components.footer import footer
 from reflex_web.components.navbar import navbar
 from reflex_web.views.aboutme.aboutme import aboutme
@@ -24,17 +25,24 @@ def index() -> rx.Component:
     The main app component.
     :return: The main app component.
     """
-    return rx.vstack(
+    return rx.box(
         navbar(),
-        header(),
+        rx.vstack(
+            rx.center(
+                header(),
+                width="100%",
+                margin_y=st.Spacing.BIG,
+            )
+        ),
         aboutme(),
         skills(),
         cv(),
         portfolio(),
         contact(),
-        footer()
+        footer(),
     )
 
 
-app = rx.App()
+app = rx.App(
+    style=st.BASE_STYLE)
 app.add_page(index)
