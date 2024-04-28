@@ -27,6 +27,7 @@ class Colors(Enum):
     PRIMARY = "rgb(209, 150, 23)"
     SECONDARY = "rgb(209, 150, 23)"
     BG = "#1e2326"
+    BG_SECONDARY = "#374046"
     SUCCESS = "#28a745"
     DANGER = "#dc3545"
     WARNING = "#ffc107"
@@ -64,14 +65,14 @@ BASE_STYLE = {
     }
 }
 
-text_h1_title_stile = dict(
+text_h1_title_style = dict(
     font_size=Spacing.BIG,
     font_weigh="bold",
     margin="0",
     padding="0",
 )
 
-text_h2_stile = dict(
+text_h2_style = dict(
     font_size=Spacing.H2,
     font_weigh="bold",
     margin="0",
@@ -79,7 +80,7 @@ text_h2_stile = dict(
     color=Colors.PRIMARY
 )
 
-text_h3_stile = dict(
+text_h3_style = dict(
     font_size=Spacing.H3,
     font_weigh="bold",
     margin="0",
@@ -90,4 +91,12 @@ text_h3_stile = dict(
 list_text_title = dict(
     color=Colors.PRIMARY,
     font_weigh="bold",
+)
+
+text_card_subs = dict(
+    size="1",
+    color=Colors.WHITE,
+    align="center",
+    width=Percentages.FULL,
+    margin_bottom=Spacing.DEFAULT
 )

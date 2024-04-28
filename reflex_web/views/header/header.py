@@ -20,44 +20,55 @@ def header() -> rx.Component:
     return rx.flex(
         rx.card(
             rx.flex(
-                rx.avatar(src=image,
-                          fallback="JCB",
-                          size="8",
-                          color_scheme="amber",
-                          variant="solid",
-                          radius="full"
-                          ),
-                rx.text("JAVIER CURTO",
-                        size="5",
-                        weight="bold",
-                        color=st.Colors.WHITE,
-                        align="center",
-                        width=st.Percentages.FULL
-                        ),
-                rx.text("Desarrollador Backend",
-                        size="1",
-                        color=st.Colors.WHITE,
-                        align="center",
-                        width=st.Percentages.FULL
-                        ),
-                rx.text("Java Spring",
-                        size="1",
-                        color=st.Colors.WHITE,
-                        align="center",
-                        width=st.Percentages.FULL
-                        ),
+                rx.avatar(
+                    src=image,
+                    fallback="JCB",
+                    size="8",
+                    color_scheme="amber",
+                    variant="solid",
+                    radius="full",
+                    margin_bottom=st.Spacing.DEFAULT
+                ),
+                rx.text(
+                    "JAVIER CURTO",
+                    size="5",
+                    weight="bold",
+                    color=st.Colors.WHITE,
+                    align="center",
+                    width=st.Percentages.FULL,
+                    margin_bottom=st.Spacing.DEFAULT
+                ),
+                rx.text(
+                    "Desarrollador Backend",
+                    style=st.text_card_subs,
+                    align="center",
+                ),
+                rx.text(
+                    "Java Spring",
+                    style=st.text_card_subs,
+                    align="center",
+                ),
                 rx.center(
                     rx.hstack(
-                        link_button("Linkedin", "https://www.linkedin.com/in/javier-curto-brull/"),
-                        link_button("Github", "https://github.com/CurtoBrull"),
-                        link_button("Instagram", "https://www.instagram.com/j.curtobrull/")
+                        link_button(
+                            "Linkedin",
+                            "https://www.linkedin.com/in/javier-curto-brull/"
+                        ),
+                        link_button(
+                            "Github",
+                            "https://github.com/CurtoBrull"
+                        ),
+                        link_button(
+                            "Instagram",
+                            "https://www.instagram.com/j.curtobrull/"
+                        )
                     ),
                     width=st.Percentages.FULL
                 ),
                 flex_wrap="wrap",
                 justify="center",
                 align="center",
-                width="150px",
+                width="180px",
             ),
             background_color=st.Colors.BG,
             size="3"
