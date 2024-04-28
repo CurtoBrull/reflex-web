@@ -20,7 +20,8 @@ def navbar() -> rx.Component:
             align="center"
         ),
         position="sticky",
-        bg=st.Colors.BG,
+        top="0",
+        bg=st.Colors.BG_SECONDARY,
         padding_x=st.Spacing.DEFAULT,
         padding_y=st.Spacing.SMALL,
         width=st.Percentages.FULL,

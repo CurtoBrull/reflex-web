@@ -5,10 +5,18 @@ Currently, it only returns a text component with the string "Contacto".
 
 import reflex as rx
 
+import styles.styles as st
+
 
 def contact() -> rx.Component:
     """
         This function returns a component "Contact".
         :return rx.Component: "Contacto".
         """
-    return rx.text("Contacto")
+    return rx.center(
+        rx.text(
+            "Contacto",
+            style=st.text_h1_title_style,
+        ),
+        bg=st.Colors.BG,
+    )
