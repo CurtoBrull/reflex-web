@@ -17,32 +17,49 @@ def header() -> rx.Component:
     """
     g = Gravatar('curto.brull.javier@gmail.com')
     image = g.get_image()
-    return rx.box(
-        rx.vstack(
-            rx.avatar(src=image,
-                      fallback="JCB",
-                      size="8",
-                      color_scheme="amber",
-                      variant="solid",
-                      radius="full"),
-            rx.text("JAVIER CURTO",
-                    size="5",
-                    weight="bold",
-                    color=st.Colors.WHITE),
-            rx.text("Desarrollador Backend",
-                    size="1",
-                    color=st.Colors.WHITE),
-            rx.text("Java Spring",
-                    size="1",
-                    color=st.Colors.WHITE),
-            rx.hstack(
-                link_button("Linkedin", "https://www.linkedin.com/in/javier-curto-brull/"),
-                link_button("Github", "https://github.com/CurtoBrull"),
-                link_button("Instagram", "https://www.instagram.com/j.curtobrull/")
+    return rx.flex(
+        rx.card(
+            rx.flex(
+                rx.avatar(src=image,
+                          fallback="JCB",
+                          size="8",
+                          color_scheme="amber",
+                          variant="solid",
+                          radius="full"
+                          ),
+                rx.text("JAVIER CURTO",
+                        size="5",
+                        weight="bold",
+                        color=st.Colors.WHITE,
+                        align="center",
+                        width=st.Percentages.FULL
+                        ),
+                rx.text("Desarrollador Backend",
+                        size="1",
+                        color=st.Colors.WHITE,
+                        align="center",
+                        width=st.Percentages.FULL
+                        ),
+                rx.text("Java Spring",
+                        size="1",
+                        color=st.Colors.WHITE,
+                        align="center",
+                        width=st.Percentages.FULL
+                        ),
+                rx.center(
+                    rx.hstack(
+                        link_button("Linkedin", "https://www.linkedin.com/in/javier-curto-brull/"),
+                        link_button("Github", "https://github.com/CurtoBrull"),
+                        link_button("Instagram", "https://www.instagram.com/j.curtobrull/")
+                    ),
+                    width=st.Percentages.FULL
+                ),
+                flex_wrap="wrap",
+                justify="center",
+                align="center",
+                width="150px",
             ),
-            align="center",
             background_color=st.Colors.BG,
-            padding=st.Spacing.SMALL,
-            border_radius=st.Percentages.TENTH,
+            size="3"
         ),
     )

@@ -14,6 +14,8 @@ class Spacing(Enum):
     This class contains the spacing constants
     """
     BIG = "2em"
+    H2 = "1.5em"
+    H3 = "1.25em"
     DEFAULT = "1em"
     SMALL = ".5em"
 
@@ -55,5 +57,37 @@ BASE_STYLE = {
     },
     rx.text: {
         "font_family": "Righteous, sans-serif",
+        "color": Colors.WHITE,
+    },
+    rx.list: {
+        "color": Colors.WHITE,
     }
 }
+
+text_h1_title_stile = dict(
+    font_size=Spacing.BIG,
+    font_weigh="bold",
+    margin="0",
+    padding="0",
+)
+
+text_h2_stile = dict(
+    font_size=Spacing.H2,
+    font_weigh="bold",
+    margin="0",
+    padding="0",
+    color=Colors.PRIMARY
+)
+
+text_h3_stile = dict(
+    font_size=Spacing.H3,
+    font_weigh="bold",
+    margin="0",
+    padding="0",
+    color=Colors.WHITE
+)
+
+list_text_title = dict(
+    color=Colors.PRIMARY,
+    font_weigh="bold",
+)
