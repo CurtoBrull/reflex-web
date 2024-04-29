@@ -50,9 +50,15 @@ BASE_STYLE = {
     }
 }
 
+navbar_title_style = dict(
+    font_family=font.Font.LOGO.value,
+    font_weight=font.FontWeight.BOLD.value,
+    font_size=Sizes.LARGE.value
+)
+
 text_h1_title_style = dict(
     font_size=Sizes.BIG.value,
-    font_weigh="bold",
+    font_weigh=font.FontWeight.BOLD.value,
     margin="0",
     padding="0",
 )

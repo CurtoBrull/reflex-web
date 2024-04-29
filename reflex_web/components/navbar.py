@@ -6,6 +6,7 @@ import reflex as rx
 
 import styles.styles as st
 import styles.colors as color
+import styles.fonts as font
 
 
 def navbar() -> rx.Component:
@@ -18,7 +19,8 @@ def navbar() -> rx.Component:
             "Javier Curto",
             height="50px",
             color=color.Colors.PRIMARY.value,
-            align="center"
+            align="center",
+            style=st.navbar_title_style,
         ),
         position="sticky",
         top="0",
