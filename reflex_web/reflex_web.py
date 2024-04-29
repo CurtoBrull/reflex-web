@@ -31,8 +31,9 @@ def index() -> rx.Component:
             rx.center(
                 header(),
                 width="100%",
-                margin_y=st.Spacing.BIG,
-            )
+                margin_y=st.Sizes.BIG.value,
+            ),
+            background="center/cover url('/fondo.jpg')"
         ),
         aboutme(),
         skills(),
@@ -44,5 +45,6 @@ def index() -> rx.Component:
 
 
 app = rx.App(
-    style=st.BASE_STYLE)
+    style=st.BASE_STYLE
+)
 app.add_page(index)

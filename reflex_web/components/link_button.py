@@ -6,15 +6,17 @@ It returns a link that is external.
 import reflex as rx
 
 
-def link_button(icon: str, url: str) -> rx.Component:
+def link_social_button(image: str, url: str) -> rx.Component:
     """
-    This function returns a link button that is external.
+    This function returns a link button.
     :param icon: The icon to display on the button
     :param url: The url to link to
-    :return: A link button that is external
+    :return: A link button
     """
     return rx.link(
-        rx.icon(icon),
+        rx.image(
+            src=f"icons/{image}"
+        ),
         href=url,
         is_external=True
     )

@@ -6,6 +6,7 @@ Currently, it only returns a text component with the string "Currículum".
 import reflex as rx
 
 import styles.styles as st
+import styles.colors as color
 
 
 def cv() -> rx.Component:
@@ -18,5 +19,5 @@ def cv() -> rx.Component:
             "Currículum",
             style=st.text_h1_title_style,
         ),
-        bg=st.Colors.BG,
+        bg=color.Colors.BG.value,
     )
