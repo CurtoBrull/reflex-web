@@ -9,10 +9,9 @@ class Colors(Enum):
     """
     This class contains the color constants
     """
-
     PRIMARY = "rgb(222, 135, 10)"
     SECONDARY = "rgb(209, 150, 23)"
-    BG = "#1e2326"
+    BG = "rgb(55, 64, 70)"
     BG_SECONDARY = "#374046"
     SUCCESS = "#28a745"
     DANGER = "#dc3545"

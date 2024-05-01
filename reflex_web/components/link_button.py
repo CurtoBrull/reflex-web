@@ -4,6 +4,7 @@ It returns a link that is external.
 """
 
 import reflex as rx
+import styles.colors as color
 
 
 def link_social_button(image: str, url: str) -> rx.Component:
@@ -37,4 +38,17 @@ def link_button_text(text: str, url: str) -> rx.Component:
                 is_external=True,
             ),
         )
+    )
+
+
+def link_navbar_button(text: str, link: str) -> rx.Component:
+    """
+    This function returns a link button.
+    :return: A link button
+    """
+    return rx.link(
+        text,
+        href=f"{link}",
+        is_external=False,
+        color=color.Colors.WHITE.value,
     )

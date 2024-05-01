@@ -10,6 +10,10 @@ import styles.fonts as font
 # Constants
 MAX_WITH = "600px"
 
+STYLESHEETS = [
+    "https://fonts.googleapis.com/css2?family=Righteous&display=swap",
+    "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap",
+]
 
 class Sizes(Enum):
     """
@@ -53,11 +57,15 @@ BASE_STYLE = {
 navbar_title_style = dict(
     font_family=font.Font.LOGO.value,
     font_weight=font.FontWeight.BOLD.value,
-    font_size=Sizes.LARGE.value
+    font_size=Sizes.LARGE.value,
+    background="linear-gradient(to right, #de870a, #e6d7b4)",
+    color=color.Colors.TRANSPARENT.value,
+    background_clip="text",
 )
 
 text_h1_title_style = dict(
     font_size=Sizes.BIG.value,
+    font_family=font.Font.TITLE.value,
     font_weigh=font.FontWeight.BOLD.value,
     margin="0",
     padding="0",
