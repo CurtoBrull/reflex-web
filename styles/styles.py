@@ -47,7 +47,8 @@ BASE_STYLE = {
         "height": "2.5em",
     },
     rx.text: {
-        "font_family": "Righteous, sans-serif",
+        "font_family": font.Font.TEXT.value,
+        "font_size": Sizes.MEDIUM.value,
         "color": color.Colors.WHITE.value,
     },
     rx.list: {
@@ -73,7 +74,7 @@ text_h1_title_style = dict(
 )
 
 text_h2_style = dict(
-    font_size=Sizes.LARGE.value,
+    font_size=Sizes.BIG.value,
     font_weigh=font.FontWeight.BOLD.value,
     margin="0",
     padding="0",
@@ -81,15 +82,15 @@ text_h2_style = dict(
 )
 
 text_h3_style = dict(
-    font_size=Sizes.MEDIUM.value,
+    font_size=Sizes.LARGE.value,
     font_weigh="bold",
     margin="0",
     padding="0",
-    color=color.Colors.WHITE.value
+    color=color.Colors.WHITE.value,
 )
 
 list_text_title = dict(
-    color=color.Colors.PRIMARY.value,
+    color=color.Colors.SECONDARY.value,
     font_weigh="bold",
 )
 
