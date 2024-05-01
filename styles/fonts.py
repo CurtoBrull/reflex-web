@@ -12,6 +12,7 @@ class Font(Enum):
     DEFAULT = "Poppins"
     TITLE = "Poppins"
     LOGO = "Righteous"
+    TEXT = "Poppins"
 
 
 class FontWeight(Enum):
