@@ -26,14 +26,16 @@ def index() -> rx.Component:
     :return: The main app component.
     """
     return rx.box(
-        navbar(),
-        rx.vstack(
-            rx.center(
-                header(),
-                width="100%",
-                margin_y=st.Sizes.BIG.value,
+        rx.box(
+            navbar(),
+            rx.vstack(
+                rx.center(
+                    header(),
+                    width="100%",
+                    margin_y=st.Sizes.BIG.value,
+                ),
             ),
-            background="center/cover url('/fondo.jpg')"
+            background="center/cover url('/fondo.jpg')",
         ),
         aboutme(),
         skills(),

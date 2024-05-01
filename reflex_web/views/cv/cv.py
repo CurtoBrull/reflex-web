@@ -19,5 +19,6 @@ def cv() -> rx.Component:
             "Currículum",
             style=st.text_h1_title_style,
         ),
+        id="cv",
         bg=color.Colors.BG.value,
     )

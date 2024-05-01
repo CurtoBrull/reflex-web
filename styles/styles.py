@@ -32,6 +32,7 @@ class Percentages(Enum):
     This class contains the percentage constants
     """
     FULL = "100%"
+    THREE_QUARTERS = "75%"
     HALF = "50%"
     THIRD = "33.33%"
     QUARTER = "25%"
