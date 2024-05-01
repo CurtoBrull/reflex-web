@@ -19,5 +19,6 @@ def portfolio() -> rx.Component:
             "Porfolio",
             style=st.text_h1_title_style,
         ),
+        id="portfolio",
         bg=color.Colors.BG.value,
     )

@@ -28,7 +28,7 @@ def aboutme() -> rx.Component:
             ),
             rx.text("Decidido dar el paso fuera de mi zona de confort, "
                     "finalmente me embarqué en el fascinante viaje de explorar mi pasión por la informática y la "
-                    "programación."
+                    "programación. "
                     "Comencé mi formación con el CFGM de Sistemas Microinformáticos y Redes, "
                     "y luego continué con el CFGS de Desarrollo de Aplicaciones Web, "
                     "adentrándome en un mundo apasionante y en constante evolución."),
@@ -73,6 +73,7 @@ def aboutme() -> rx.Component:
             ),
             margin=st.Sizes.DEFAULT.value,
         ),
+        id="aboutme",
         padding=st.Sizes.DEFAULT.value,
         bg=color.Colors.BG.value
     )

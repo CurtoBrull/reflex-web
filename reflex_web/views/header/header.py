@@ -73,4 +73,5 @@ def header() -> rx.Component:
             background_color=color.Colors.BG.value,
             size="3",
         ),
+        id="header",
     )

@@ -44,6 +44,8 @@ def link_button_text(text: str, url: str) -> rx.Component:
 def link_navbar_button(text: str, link: str) -> rx.Component:
     """
     This function returns a link button.
+    :param text: The text to display on the button
+    :param link: The url to link to
     :return: A link button
     """
     return rx.link(

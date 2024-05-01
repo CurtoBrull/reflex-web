@@ -12,7 +12,7 @@ class Colors(Enum):
     PRIMARY = "rgb(222, 135, 10)"
     SECONDARY = "rgb(209, 150, 23)"
     BG = "rgb(55, 64, 70)"
-    BG_SECONDARY = "#374046"
+    BG_SECONDARY = "rgb(50, 55, 60)"
     SUCCESS = "#28a745"
     DANGER = "#dc3545"
     WARNING = "#ffc107"
