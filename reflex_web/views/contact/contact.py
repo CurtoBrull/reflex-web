@@ -6,6 +6,7 @@ Currently, it only returns a text component with the string "Contacto".
 import reflex as rx
 
 import styles.styles as st
+import styles.colors as color
 
 
 def contact() -> rx.Component:
@@ -18,5 +19,5 @@ def contact() -> rx.Component:
             "Contacto",
             style=st.text_h1_title_style,
         ),
-        bg=st.Colors.BG,
+        bg=color.Colors.BG.value,
     )

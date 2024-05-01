@@ -7,7 +7,8 @@ import reflex as rx
 from libgravatar import Gravatar
 
 import styles.styles as st
-from reflex_web.components.link_button import link_button
+import styles.colors as color
+from reflex_web.components.link_button import link_social_button
 
 
 def header() -> rx.Component:
@@ -15,7 +16,8 @@ def header() -> rx.Component:
     This function returns the header component of the web application.
     :return:    The header component.
     """
-    g = Gravatar('curto.brull.javier@gmail.com')
+    g = Gravatar("curto.brull.javier@gmail.com")
+    color_border = color.Colors.PRIMARY.value
     image = g.get_image()
     return rx.flex(
         rx.card(
@@ -27,16 +29,17 @@ def header() -> rx.Component:
                     color_scheme="amber",
                     variant="solid",
                     radius="full",
-                    margin_bottom=st.Spacing.DEFAULT
+                    margin_bottom=st.Sizes.DEFAULT.value,
+                    border=f"5px solid {color_border}",
                 ),
                 rx.text(
                     "JAVIER CURTO",
                     size="5",
                     weight="bold",
-                    color=st.Colors.WHITE,
+                    color=color.Colors.WHITE.value,
                     align="center",
-                    width=st.Percentages.FULL,
-                    margin_bottom=st.Spacing.DEFAULT
+                    width=st.Percentages.FULL.value,
+                    margin_bottom=st.Sizes.DEFAULT.value,
                 ),
                 rx.text(
                     "Desarrollador Backend",
@@ -50,27 +53,24 @@ def header() -> rx.Component:
                 ),
                 rx.center(
                     rx.hstack(
-                        link_button(
-                            "Linkedin",
-                            "https://www.linkedin.com/in/javier-curto-brull/"
+                        link_social_button(
+                            "linkedin.svg",
+                            "https://www.linkedin.com/in/javier-curto-brull/",
                         ),
-                        link_button(
-                            "Github",
-                            "https://github.com/CurtoBrull"
+                        link_social_button(
+                            "github.svg", "https://github.com/CurtoBrull"),
+                        link_social_button(
+                            "instagram.svg", "https://www.instagram.com/j.curtobrull/"
                         ),
-                        link_button(
-                            "Instagram",
-                            "https://www.instagram.com/j.curtobrull/"
-                        )
                     ),
-                    width=st.Percentages.FULL
+                    width=st.Percentages.FULL.value,
                 ),
                 flex_wrap="wrap",
                 justify="center",
                 align="center",
                 width="180px",
             ),
-            background_color=st.Colors.BG,
-            size="3"
+            background_color=color.Colors.BG.value,
+            size="3",
         ),
     )

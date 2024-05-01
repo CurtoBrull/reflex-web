@@ -6,6 +6,7 @@ Currently, it only returns a text component with the string "Sobre Mí".
 import reflex as rx
 
 import styles.styles as st
+import styles.colors as color
 
 
 def aboutme() -> rx.Component:
@@ -55,7 +56,7 @@ def aboutme() -> rx.Component:
                     rx.list.item("Vivo en"),
                     rx.list.item("Huércal de Almería"),
                 ),
-                width=st.Percentages.HALF,
+                width=st.Percentages.HALF.value,
 
             ),
             rx.box(
@@ -68,10 +69,10 @@ def aboutme() -> rx.Component:
                     rx.list.item("Example 2"),
                     rx.list.item("Example 3"),
                 ),
-                width=st.Percentages.HALF
+                width=st.Percentages.HALF.value
             ),
-            margin=st.Spacing.DEFAULT,
+            margin=st.Sizes.DEFAULT.value,
         ),
-        padding=st.Spacing.DEFAULT,
-        bg=st.Colors.BG
+        padding=st.Sizes.DEFAULT.value,
+        bg=color.Colors.BG.value
     )
