@@ -43,6 +43,7 @@ def aboutme() -> rx.Component:
                     "de los movimientos de stock en sus tiendas. Este desafío me permite aplicar mis habilidades "
                     "y conocimientos en un entorno dinámico y exigente, "
                     "contribuyendo a un proyecto importante para nuestro cliente."),
+            font_size=[st.Sizes.SMALL.value, st.Sizes.DEFAULT.value, st.Sizes.DEFAULT.value, st.Sizes.DEFAULT.value],
         ),
         rx.flex(
             rx.box(
@@ -71,10 +72,9 @@ def aboutme() -> rx.Component:
                     rx.list.item(
                         "Desarrollador Backend con Java Spring en NTT Data"),
                 ),
-                width=st.Percentages.HALF.value,
-
+                width=[st.Percentages.FULL.value],
             ),
-            rx.box(
+            rx.tablet_and_desktop(
                 rx.center(
                     rx.text(
                         "Aficiones",

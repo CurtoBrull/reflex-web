@@ -26,8 +26,8 @@ def index() -> rx.Component:
     :return: The main app component.
     """
     return rx.box(
+        navbar(),
         rx.box(
-            navbar(),
             rx.vstack(
                 rx.center(
                     header(),

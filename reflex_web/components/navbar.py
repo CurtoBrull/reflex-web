@@ -15,32 +15,29 @@ def navbar() -> rx.Component:
     Navbar component for the web application.
     :return: Component "navbar"
     """
-    return rx.center(
+    return rx.flex(
+        rx.text(
+            "Javier Curto",
+            style=st.navbar_title_style,
+        ),
         rx.flex(
-            rx.text(
-                "Javier Curto",
-                align="left",
-                style=st.navbar_title_style,
-            ),
-            rx.flex(
-                lb.link_navbar_button("SOBRE MI", "/#aboutme"),
-                lb.link_navbar_button("SKILLS", "/#skills"),
-                lb.link_navbar_button("CURRICULUM", "/#cv"),
-                lb.link_navbar_button("PORTFOLIO", "/#portfolio"),
-                lb.link_navbar_button("CONTACTO", "/#contact"),
-                spacing="5",
-            ),
-            padding_x=st.Sizes.BIG.value,
-            padding_y=st.Sizes.SMALL.value,
-            bg=color.Colors.BG_SECONDARY.value,
-            justify="between",
-            align="center",
+            lb.link_navbar_button("SOBRE MI", "/#aboutme"),
+            lb.link_navbar_button("SKILLS", "/#skills"),
+            lb.link_navbar_button("CURRICULUM", "/#cv"),
+            lb.link_navbar_button("PORTFOLIO", "/#portfolio"),
+            lb.link_navbar_button("CONTACTO", "/#contact"),
             spacing="5",
-            border_radius="0 0 10px 10px",
+            id="navbar-links",
+            display=["none", "none", "flex", "flex"],
         ),
         id="navbar",
-        bg=color.Colors.TRANSPARENT.value,
         position="sticky",
         top="0",
         z_index="999",
+        padding_x=st.Sizes.SMALL.value,
+        width=st.Percentages.FULL.value,
+        bg=color.Colors.BG_SECONDARY.value,
+        spacing="5",
+        justify="between",
+        align="baseline",
     )
