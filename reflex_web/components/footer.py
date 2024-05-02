@@ -20,11 +20,11 @@ def footer() -> rx.Component:
     current_year = str(dt.datetime.now().year)
     url = "https://jcurto.eu"
 
-    return rx.hstack(
+    return rx.flex(
         rx.text(
             f"\u24b8 2023-{current_year} ",
             color=color.Colors.PRIMARY.value,
-            font_size=st.Sizes.DEFAULT.value,
+            font_size=st.Sizes.SMALL.value,
         ),
         rx.link(
             "Javier Curto Brull",
@@ -32,18 +32,25 @@ def footer() -> rx.Component:
             color=color.Colors.SECONDARY.value,
             font_size="1.2em",
             font_weight="bold",
+            display=["none", "flex", "flex", "flex"]
         ),
-        link_social_button(
-            "linkedin.svg", "https://www.linkedin.com/in/javier-curto-brull/"
+        rx.flex(
+
+            link_social_button(
+                "linkedin.svg", "https://www.linkedin.com/in/javier-curto-brull/"
+            ),
+            link_social_button("github.svg", "https://github.com/CurtoBrull"),
+            link_social_button(
+                "instagram.svg", "https://www.instagram.com/j.curtobrull/"),
+            spacing="2",
         ),
-        link_social_button("github.svg", "https://github.com/CurtoBrull"),
-        link_social_button(
-            "instagram.svg", "https://www.instagram.com/j.curtobrull/"),
-        rx.image(
-            src="favicon.ico",
-            width=50,
-            height=50,
-            alt="favicon"
+        rx.center(
+            rx.image(
+                src="favicon.ico",
+                width=50,
+                height=50,
+                alt="favicon",
+            ),
         ),
         bg=color.Colors.BG_SECONDARY.value,
         padding_x=st.Sizes.DEFAULT.value,
@@ -52,4 +59,8 @@ def footer() -> rx.Component:
         position="sticky",
         bottom="0",
         z_index="999",
+        spacing="5",
+        justify="between",
+        align="center",
+        wrap="wrap",
     )

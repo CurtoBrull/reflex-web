@@ -24,7 +24,8 @@ class Sizes(Enum):
     LARGE = "1.5em"
     MEDIUM = "1.25em"
     DEFAULT = "1em"
-    SMALL = ".5em"
+    SMALL = ".75em"
+    TINY = ".5em"
 
 
 class Percentages(Enum):
@@ -59,7 +60,7 @@ BASE_STYLE = {
 navbar_title_style = dict(
     font_family=font.Font.LOGO.value,
     font_weight=font.FontWeight.BOLD.value,
-    font_size=Sizes.LARGE.value,
+    font_size=Sizes.BIG.value,
     background="linear-gradient(to right, #de870a, #e6d7b4)",
     color=color.Colors.TRANSPARENT.value,
     background_clip="text",
