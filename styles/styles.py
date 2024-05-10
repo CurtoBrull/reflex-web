@@ -15,11 +15,13 @@ STYLESHEETS = [
     "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap",
 ]
 
+
 class Sizes(Enum):
     """
     This class contains the spacing constants
     """
-    VERY_BIG = "4em"
+    ULTRA_BIG = "4em"
+    VERY_BIG = "3em"
     BIG = "2em"
     LARGE = "1.5em"
     MEDIUM = "1.25em"
@@ -67,10 +69,19 @@ navbar_title_style = dict(
 )
 
 text_h1_title_style = dict(
+    font_size=Sizes.VERY_BIG.value,
+    font_family=font.Font.TITLE.value,
+    font_weigh=font.FontWeight.BOLD.value,
+    color=color.Colors.SECONDARY,
+    margin="10px",
+    padding="0",
+)
+
+text_h2_title_style = dict(
     font_size=Sizes.BIG.value,
     font_family=font.Font.TITLE.value,
     font_weigh=font.FontWeight.BOLD.value,
-    margin="0",
+    margin="10px",
     padding="0",
 )
 
